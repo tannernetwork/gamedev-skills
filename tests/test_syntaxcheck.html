@@ -31,6 +31,11 @@
 						categoryScript.onload = function() {
 							if(queue.length > 0)
 								queue.pop()();
+						}						
+						categoryScript.onerror = function() {
+							output.innerHTML += '<li><b style="color: #cc0000">Script not found</b></li>';
+							if(queue.length > 0)
+								queue.pop()();
 						}
 						document.body.appendChild(categoryScript);
 					}
