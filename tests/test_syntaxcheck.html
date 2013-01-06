@@ -54,7 +54,9 @@
 			window.gamedevSkillsSpecs = function(id, content) {
 				output.innerHTML += '<li>['+id+'] '+JSON.stringify(content)+'</li>';
 			}
-			document.title = 'Success';
+			document.onload = function(){
+				document.title = 'Success';
+			}
 		</script>
 		<ul id="output">Loading scripts</ul>
 	</body>
