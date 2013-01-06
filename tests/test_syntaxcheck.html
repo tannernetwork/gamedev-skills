@@ -6,7 +6,7 @@
 		<h2>Syntax check test</h2>
 		<script type="text/javascript">
 			var indexScript = document.createElement('script');
-			indexScript.src = "../lib/index.js?"+new Date().getTime();
+			indexScript.src = "https://raw.github.com/Tanner963/gamedev-skills/master/lib/index.js?"+new Date().getTime();
 			
 			var output;
 			
@@ -16,7 +16,7 @@
 			}
 			setTimeout(function() {	
 				output = document.getElementById('output');			
-				output.innerHTML = '<li><i>Loading "../lib/index.js"</i></li>';
+				output.innerHTML = '<li><i>Loading "https://raw.github.com/Tanner963/gamedev-skills/master/lib/index.js"</i></li>';
 				document.body.appendChild(indexScript);
 			}, 1);
 
@@ -26,9 +26,9 @@
 					output.innerHTML += '<li>['+category.id+'] '+JSON.stringify(category.title)+'</li>';
 					
 					var categoryScript = document.createElement('script');
-					categoryScript.src = "../lib/"+category.file+"?"+new Date().getTime();
+					categoryScript.src = "https://raw.github.com/Tanner963/gamedev-skills/master/lib/"+category.file+"?"+new Date().getTime();
 					return function() {
-						output.innerHTML += '<li><i>Loading "../lib/'+category.file+'"</i></li>';
+						output.innerHTML += '<li><i>Loading "https://raw.github.com/Tanner963/gamedev-skills/master/lib/'+category.file+'"</i></li>';
 						categoryScript.onload = function() {
 							if(queue.length > 0)
 								queue.pop()();
