@@ -14,4 +14,8 @@ Struktura
 Format
 ======
 
-Definicje są zapisane w formacie JSON.
+Definicje są zapisane w formie skryptów js:
+
+- lib/index.js - lista kategorii, z których każda ma swój własny plik z listą skillów
+- lib/[idkategorii].js - lista skillów z danej kategorii
+- lib/specs.js - plik, w którym są zdefiniowane specjalizacji
